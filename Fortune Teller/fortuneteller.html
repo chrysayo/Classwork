@@ -1,0 +1,72 @@
+<html>
+<head>
+</head>
+<meta charset="UTF-8">
+<title> Magic Game Ball</title>
+<style> 
+#eight-ball{
+width:500px;
+margin: 0 auto;
+test-align: center;
+}
+ body {
+                background-image: url(GB.jpg);            
+                background-size: 50%;
+                background-origin: content;
+                background-repeat: no-repeat;
+                background-position: center;
+             }
+#answer{
+
+}
+</style>
+
+<body>
+</body>
+<script> 
+
+ var fortuneTeller = {
+        promptText: "Do you want to know whom you are most like?.",
+        //Change this text to anything you'd like
+        answerType: "image",
+        answers: [
+            "answer%201.gif",
+            "answer%202.gif",
+            "answer%203.gif",
+            "answer%204.gif",
+            "answer%205.gif",
+            "answer%206.gif",
+            "answer%207.gif",
+            "answer%208.gif"
+
+        ],
+        getAnswer: function(){
+            var min = 1;
+            var max = this.answers.length;
+            var index = Math.floor(Math.random() * (max - min + 1)) + min;
+            return this.answers[index];
+
+    console.log(fortuneTeller.answers);
+
+    function shake(){
+        // Set the prompt text
+        var question = prompt(fortuneTeller.promptText);
+
+        // Display the question the user asked
+        var questionText = document.getElementById('question');
+        questionText.innerHTML = question;
+
+        // Ask our fotruneTeller for a random answer
+        var randomAnswer = fortuneTeller.getAnswer();
+
+        // Access the DOM element we want to to change
+        var fortuneText = document.getElementById('answer');
+
+        // Update the element with our answer.
+        fortuneText.innerHTML = '<img src="' + randomAnswer +'"/>';
+    }
+
+}
+</script>
+
+</html>
