@@ -1,21 +1,25 @@
 <html>
-<head>
-<meta charset="UTF-8">
-<title> Magic Game Ball</title>
-<style> 
-#eight-ball{
-width:500px;
-margin: 0 auto;
-test-align: center;
+	<head>
+	<script type="text/javascript" src="shake.js.html"></script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+	<title> Magic Game Ball</title>
+	<style> 
+		#eight-ball{
+			width:500px;
+			margin: 0 auto;
+			test-align: center;
 }
- body {
-                background-image: url(file:///Users/chrysayo/Desktop/Dropbox/EIGHT%20BALL/GB.jpg);            
+ 			body {
+                background-image: url(file:///Users/chrysayo/Desktop/Dropbox/EIGHT%20BALLGB.jpg);            
                 background-size: 50%;
                 background-origin: content;
                 background-repeat: no-repeat;
              }
-</style>
-</head>
+			 </style>
+	</head>
 <body>
 <div id="eight-ball">
     <button onclick="shake()">Whats in your future?</button>
@@ -25,8 +29,7 @@ test-align: center;
 
 
 <script> 
-
-//Called when we click the shake button
+window.onload = function() {//Called when we click the shake button
 function shake(){
 // The question we asked
 var question = prompt ("Do you want me to rate your personality?");
@@ -93,6 +96,13 @@ var answerEight = '<img src="answer%208.gif"/>';
             }
         }
 }
+window.addEventListener('shake', shakeEventDidOccur, false);
+
+    //function to call when shake occurs
+    function shakeEventDidOccur () {
+        shake();
+    }
+};
 </script>
 
 </body>
