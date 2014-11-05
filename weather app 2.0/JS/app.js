@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	// Setup variables for our forecast.io request
-	var apiKey     = '1c32b940c4e8a16e1bf80290511173a0';
+	var apiKey     = 'a586d11648043cec0b74207005ff6a5d';
 	var apiURL     = 'https://api.forecast.io/forecast/' + apiKey; 
 	var defaultLat = '40.6760148';
 	var defaultLng = '-73.9785012';
