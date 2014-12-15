@@ -1,0 +1,72 @@
+       <html>
+    <head>
+    	<meta name="viewport" content="width=device-width", initial-scale="1",>
+        <title>iWallr</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+       
+        <link rel="stylesheet" href="css/style2.css" type="text/css" media="screen" devices="handheld"/>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css"/>
+                <script type="text/javascript" src="js/instafeed.js"></script>
+</head>
+    <body>
+    	<div class="header">
+			<h1>iWallr <img src="images/noun_27925_cc.png" class="sprite-image"
+     style="width:40px; height:40px; overflow:hidden; position:relative"></h1> <h2 class="subtext">Bringing you Instagram's most popular images!</h2>
+   </div>
+   <div data-role="fieldcontain">
+  <div class="ui-field-contain">
+
+
+
+</div>
+</div>	
+<div role="main" class="main">
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'popular',
+        tagName: 'piybull',
+        sortBy: 'most-recent',
+        clientId: 'e5aaf0c4c9db4f4dba1063b99cac49da',
+        limit: '60',
+        resolution: 'low_resolution'
+
+    });
+    feed.run();
+</script>
+<script type="text/javascript">
+var loadButton = document.getElementById('load-more');
+var feed = new Instafeed({
+  // every time we load more, run this function
+  after: function() {
+    // disable button if no more results to load
+    if (!this.hasNext()) {
+      loadButton.setAttribute('enabled', 'enabled');
+    }
+  },
+});
+
+// bind the load more button
+loadButton.addEventListener('click', function() {
+  feed.next();
+});
+
+// run our feed!
+feed.run();
+</script>
+       <ul>
+       	<div id="instafeed"></div>
+       </ul>
+</br>
+</br>
+</br>
+</br>
+    </div><!-- /content -->
+
+</div><!-- /page -->
+<div class="footer">
+</div>
+</body>
+</html>
+
+

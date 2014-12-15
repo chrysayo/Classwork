@@ -1,0 +1,27 @@
+body{
+	background:#B8915A;
+	font-family:'Helvetica';
+	font-size:11px;
+	color: #fff;
+}
+a{
+	text-decoration:none;
+}
+.header, .footer{
+	width:100%;
+	background:#00BFFF;
+	height:50px;
+	position:relative;
+	line-height:50px;
+	-moz-box-shadow:0px -2px 10px #000 inset;
+	-webkit-box-shadow:0px -2px 10px #000 inset;
+	box-shadow:0px -2px 10px #000 inset;
+}
+.header{
+	border-bottom:1px solid #00BFFF;
+	z-index:9999;
+	margin-bottom:30px;
+}
+.footer{
+	border-top:1px solid #00BFFF;
+}
